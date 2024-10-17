@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏跳转示例</title>
+    <style>
+        /* 隐藏iframe */
+        #hidden-iframe {
+            display: none; /* 或者使用 visibility: hidden; */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>欢迎来到我的网站</h1>
+    <button id="jumpButton">点击跳转</button>
+
+    <iframe id="hidden-iframe" src="" frameborder="0"></iframe>
+
+    <script>
+        document.getElementById('jumpButton').onclick = function() {
+            var iframe = document.getElementById('hidden-iframe');
+            iframe.src = 'http://175.178.250.88:43000'; // 替换为你需要跳转的URL
+            // 这里可以添加其他逻辑，比如在跳转前做一些处理
+        };
+    </script>
+
+</body>
+</html>
